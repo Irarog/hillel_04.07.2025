@@ -1,0 +1,5 @@
+number_one = int(input("Enter any number: "))
+number_two = int(input("Enter any number: "))
+number_three = int(input("Enter any number: "))
+number_four = int(input("Enter any number: "))
+print(str(number_four) + str(number_three) + str(number_two) + str(number_one))
