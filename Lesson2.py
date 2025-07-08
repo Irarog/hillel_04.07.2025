@@ -1,5 +1,5 @@
 #task 2.1
-user_input = int(input("Enter 4 digits number: ")) #1234
+user_input = int(input("Enter 4-digit number: ")) #1234
 
 print(user_input // 1000) #1234/1000=1 answer=1
 print(user_input // 100 % 10) #1234/100=12 12/10=1.2 answer=2
