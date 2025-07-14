@@ -11,4 +11,4 @@ elif math_action == "*":
 elif math_action == "/" and number_2 != 0:
     print(number_1 / number_2)
 else:
-    print("Something went wrong!")
+    print("Oops! Something went wrong!")
