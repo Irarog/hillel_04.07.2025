@@ -8,5 +8,5 @@ if len(lst) > 1:
     lst.pop(-1)
     lst.insert(0,last_number)
     print(lst)
-if len(lst) <= 1:
+else:
     print(lst)
