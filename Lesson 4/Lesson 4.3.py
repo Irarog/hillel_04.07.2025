@@ -2,7 +2,7 @@ import random
 
 lst_length = random.randint(3,10)
 
-random_lst = [random.randint(1,10) for i in range(lst_length)]
+random_lst = [random.randint(1,10) for element in range(lst_length)]
 
 print(random_lst)
 
