@@ -8,7 +8,6 @@ if len(lst) == 0:
 
 if len(lst) >= 1:
     last_number = lst[-1]
-
     sum_numbers = 0
 
     for i in range(0, len(lst), 2):
