@@ -8,15 +8,15 @@ if len(lst) == 0:
 
 if len(lst) >= 1:
 
-    position = 0
+    index = 0
 
     for not_zero_number in lst:
         if not_zero_number != 0:
-            lst[position] = not_zero_number
-            position += 1
+            lst[index] = not_zero_number
+            index += 1
             # print(not_zero_number)
 
-    for zero in range(position, len(lst)):
+    for zero in range(index, len(lst)):
         lst[zero] = 0
 
     print(lst)
