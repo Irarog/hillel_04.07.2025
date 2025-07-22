@@ -6,6 +6,5 @@ random_lst = [random.randint(1,10) for element in range(lst_length)]
 
 print(random_lst)
 
-if lst_length >= 3:
-    new_list = [random_lst[0], random_lst[2], random_lst[-2]]
-    print(new_list)
+new_list = [random_lst[0], random_lst[2], random_lst[-2]]
+print(new_list)
