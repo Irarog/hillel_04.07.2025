@@ -12,6 +12,6 @@ for symbol in punctuation_symbols:
     hashtag = hashtag.replace(symbol, "").replace(" ", "")
 
 if len(hashtag) >=140:
-    print("#" +  hashtag[:139])
+    print("#" +  hashtag[:140])
 else:
     print("#" + hashtag)
