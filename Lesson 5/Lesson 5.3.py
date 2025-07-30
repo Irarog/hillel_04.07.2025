@@ -1,15 +1,13 @@
-# 'Python Community' -> #PythonCommunity
-# 'i like python community!' -> #ILikePythonCommunity
-# 'Should, I. subscribe? Yes!' -> #ShouldISubscribeYes
+import string
 
 text_input = input("Enter text for a hashtag: ")
 
-hashtag = (text_input.title())
-
-punctuation_symbols = '''!"#$%&'()*+,-./:;<=>?@[]^_`{|}~'''
+punctuation_symbols = string.punctuation
+words = text_input.split()
+hashtag = "".join(word.capitalize() for word in words)
 
 for symbol in punctuation_symbols:
-    hashtag = hashtag.replace(symbol, "").replace(" ", "")
+    hashtag = hashtag.replace(symbol, "")
 
 if len(hashtag) >=140:
     print("#" +  hashtag[:140])
