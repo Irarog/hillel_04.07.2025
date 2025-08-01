@@ -1,9 +1,12 @@
 def correct_sentence(text):
     text = str(input("Add your text: "))
-    if words in text for words in text:
+    text = text.capitalize()
+    last_el = text[-1]
+    if last_el == ".":
+        return text
+    else:
+        return text + "."
 
-        if text.count(".") == 1:
-            text = text.replace(".", "")
 
 assert correct_sentence("greetings, friends") == "Greetings, friends.", 'Test1'
 assert correct_sentence("hello") == "Hello.", 'Test2'
