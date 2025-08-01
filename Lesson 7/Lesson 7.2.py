@@ -1,6 +1,6 @@
-def correct_sentence(text):
+def correct_sentence(text:str) -> str:
     text = str(input("Add your text: "))
-    text = text.capitalize()
+    text = text[0].capitalize() + text[1:]
     last_el = text[-1]
     if last_el == ".":
         return text
