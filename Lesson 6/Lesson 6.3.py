@@ -1,12 +1,7 @@
-number_input = int(input("Enter any number: "))
-
-def calculation(number):
-   while number > 9:
-       index = 0
-       for digit in str(number):
-           index += int(digit)
-           number = index
-       return number
-
-result = calculation(number_input)
-print(result)
+number = int(input("Enter any number: "))
+while number > 9:
+    result = 1
+    for digit in str(number):
+        result *= int(digit)
+    number = result
+print(number)
