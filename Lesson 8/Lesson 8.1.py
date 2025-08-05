@@ -1,5 +1,4 @@
 def add_one(some_list:list) -> list:
-    some_list = [1,2,3,4]
     number = int("".join(map(str, some_list)))
     number += 1
     return list(map(int, str(number)))
