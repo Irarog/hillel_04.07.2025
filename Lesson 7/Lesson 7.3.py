@@ -1,6 +1,5 @@
-def second_index(text:str, some_str:str) -> int:
-    text = input(str("Add some text: "))
-    some_str = input(str("Add some str: "))
+from typing import Union
+def second_index(text:str, some_str:str) -> Union[int,None]:
     index_1 = text.find(some_str)
     index_2 = text.find(some_str, index_1 + 1)
     if index_2 == -1:
