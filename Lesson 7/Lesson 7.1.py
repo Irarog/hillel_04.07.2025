@@ -1,9 +1,9 @@
 from typing import Union
+
+
 def say_hi(name:str, age:int) -> Union[str, None]:
-    if name and age > 0:
-        return f"Hi. My name is {name} and I'm {age} years old"
-    else:
-        return None
+    return f"Hi. My name is {name} and I'm {age} years old"
+
 
 assert say_hi("Alex", 32) == "Hi. My name is Alex and I'm 32 years old", 'Test1'
 assert say_hi("Frank", 68) == "Hi. My name is Frank and I'm 68 years old", 'Test2'
