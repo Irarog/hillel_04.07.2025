@@ -5,7 +5,7 @@ def difference(*args) -> Union[int,float]:
     if not args:
         return 0
     result = max(args) - min(args)
-    return round(result, 2) if int else int(result)
+    return round(result, 2)
 
 
 assert difference(1, 2, 3) == 2, 'Test1'
