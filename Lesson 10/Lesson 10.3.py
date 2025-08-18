@@ -1,4 +1,4 @@
-def is_even(digit):
+def is_even(digit: int) -> bool:
     if digit % 2 == 0:
         return True
     else:
