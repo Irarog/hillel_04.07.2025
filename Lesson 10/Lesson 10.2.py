@@ -1,5 +1,6 @@
 import string
 
+
 def first_word(text: str) -> str:
         words = text.split()
 
@@ -10,6 +11,7 @@ def first_word(text: str) -> str:
             if '.' in cleaned_word:
                 cleaned_word = cleaned_word.split('.')[0]
             return cleaned_word
+
 
 assert first_word("Hello world") == "Hello", 'Test1'
 assert first_word("greetings, friends") == "greetings", 'Test2'
