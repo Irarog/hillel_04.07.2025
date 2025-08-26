@@ -1,4 +1,4 @@
-def prime_generator(end):
+def prime_generator(end:int)->list:
     count = 2
     while count <= end:
         is_prime = True
