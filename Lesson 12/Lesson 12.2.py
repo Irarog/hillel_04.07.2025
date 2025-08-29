@@ -1,23 +1,23 @@
 class Item:
-
     def __init__(self, name, price, description, dimensions):
+        self.name = name
         self.price = price
         self.description = description
         self.dimensions = dimensions
-        self.name = name
 
     def __str__(self):
-        pass
+        return f"{self.name}, price: {self.price}"
+
 
 class User:
-
     def __init__(self, name, surname, numberphone):
         self.name = name
         self.surname = surname
         self.numberphone = numberphone
 
     def __str__(self):
-        pass
+        return f"{self.name} {self.surname}"
+
 
 class Purchase:
     def __init__(self, user):
@@ -29,10 +29,14 @@ class Purchase:
         self.products[item] = cnt
 
     def __str__(self):
-        pass
+        lines = [f"User: {self.user}", "Items:"]
+        for item, cnt in self.products.items():
+            lines.append(f"{item.name}: {cnt} pcs.")
+        return "\n".join(lines)
 
     def get_total(self):
-        pass
+        return sum(item.price * count for item, count in self.products.items())
+
 
 lemon = Item('lemon', 5, "yellow", "small", )
 apple = Item('apple', 2, "red", "middle", )
