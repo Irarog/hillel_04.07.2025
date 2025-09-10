@@ -1,38 +1,36 @@
-from math import gcd
-
 class Fraction:
     def __init__(self, a:int, b:int) -> None:
         self.a = a
         self.b = b
         if b == 0:
-            raise ValueError("b should be grater than 0")
+            raise ValueError('b should be grater than 0')
 
-    def __mul__(self, other):
+    def __mul__(self, other: 'Fraction') -> 'Fraction':
         return Fraction(self.a * other.a, self.b * other.b)
 
-    def __add__(self, other):
+    def __add__(self, other: 'Fraction') -> 'Fraction':
         new_a = self.a * other.b + other.a * self.b
         new_b = self.b * other.b
         return Fraction(new_a, new_b)
 
-    def __sub__(self, other):
+    def __sub__(self, other: 'Fraction') -> 'Fraction':
         new_a = self.a * other.b - other.a * self.b
         new_b = self.b * other.b
         return Fraction(new_a, new_b)
 
-    def __eq__(self, other):
+    def __eq__(self, other: 'Fraction') -> bool:
         f_1 = self.a / self.b
         f_2 = other.a / other.b
         return f_1 == f_2
 
-    def __gt__(self, other):
+    def __gt__(self, other: 'Fraction') -> bool:
         return self.a * other.b > other.a * self.b
 
-    def __lt__(self, other):
+    def __lt__(self, other: 'Fraction') -> bool:
         return self.a * other.b < other.a * self.b
 
-    def __str__(self):
-        return f"Fraction: {self.a}, {self.b}"
+    def __str__(self) -> str:
+        return f'Fraction: {self.a}, {self.b}'
 
 
 f_a = Fraction(2, 3)
