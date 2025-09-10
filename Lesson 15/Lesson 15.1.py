@@ -1,3 +1,6 @@
+from typing import Union, overload
+
+
 class Rectangle:
     def __init__(self, width:int, height:int) -> None:
         self.width = width
@@ -6,12 +9,12 @@ class Rectangle:
     def get_square(self) -> int:
         return self.width * self.height
 
-    def __eq__(self, other) -> bool:
+    def __eq__(self, other: object) -> bool:
         if isinstance(other, Rectangle):
             return self.get_square() == other.get_square()
         return False
 
-    def __add__(self, other):
+    def __add__(self, other: object) -> Union['Rectangle', NotImplemented]:
         if isinstance(other, Rectangle):
             total_area = self.get_square() + other.get_square()
 
@@ -20,7 +23,7 @@ class Rectangle:
             return Rectangle(new_width, new_height)
         return NotImplemented
 
-    def __mul__(self, n):
+    def __mul__(self, n: Union[int, float]) -> Union['Rectangle', NotImplemented]:
         if isinstance(n, (int, float)) and n > 0:
             new_area = self.get_square() * n
             new_width = self.width
@@ -28,12 +31,11 @@ class Rectangle:
             return Rectangle(new_width, new_height)
         return NotImplemented
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f'Rectangle({self.width}, {self.height}) with area {self.get_square()}'
 
 
-# Testing below
-
+# Testing is below
 r1 = Rectangle(2, 4)
 r2 = Rectangle(3, 6)
 
